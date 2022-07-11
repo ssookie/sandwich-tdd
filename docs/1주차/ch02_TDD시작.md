@@ -95,6 +95,7 @@ public class Calculator {
     }
 }
 ```
+모든 규칙 충족하는 경우 
 
 ### 
 
