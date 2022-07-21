@@ -20,5 +20,9 @@ dependencies {
 }
 
 test {
+//    useJUnitPlatform {
+//        includeTags 'assertions-test'
+//        excludeTags 'basic-test'
+//    }
     useJUnitPlatform()
 }
