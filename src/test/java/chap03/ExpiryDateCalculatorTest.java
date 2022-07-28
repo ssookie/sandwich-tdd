@@ -140,6 +140,7 @@ public class ExpiryDateCalculatorTest {
 
     @Test
     void 십만원을_납부하면_1년_제공() {
+        // given
         assertExpiryDate(
                 PayData.builder()
                         .billingDate(LocalDate.of(2019, 1, 28))
@@ -156,8 +157,11 @@ public class ExpiryDateCalculatorTest {
 
     private void assertExpiryDate(
             PayData payData, LocalDate expectedExpiryDate) {
+        // when
         ExpiryDateCalculator cal = new ExpiryDateCalculator();
         LocalDate realExpiryDate = cal.calculateExpiryDate(payData);
+
+        // then
         assertEquals(expectedExpiryDate, realExpiryDate);
     }
 
